@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.syriamarket.ui.home.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_nav_home_to_productPageFragment"
+            app:destination="@id/productPageFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_allProductsFragment"
+            app:destination="@id/allProductsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.syriamarket.ui.profile.ProfileFragment"
+        android:label="profile_fragment"
+        tools:layout="@layout/profile_fragment" />
+    <fragment
+        android:id="@+id/productPageFragment"
+        android:name="com.example.syriamarket.ui.productPage.ProductPageFragment"
+        android:label="product_page_fragment"
+        tools:layout="@layout/product_page_fragment" >
+        <action
+            android:id="@+id/action_productPageFragment_to_allProductsFragment"
+            app:destination="@id/allProductsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allProductsFragment"
+        android:name="com.example.syriamarket.ui.allProducts.AllProductsFragment"
+        android:label="all_products_fragment"
+        tools:layout="@layout/all_products_fragment" >
+        <action
+            android:id="@+id/action_allProductsFragment_to_productPageFragment"
+            app:destination="@id/productPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_my_purchases"
+        android:name="com.example.syriamarket.ui.myPurchases.MyPurchasesFragment"
+        android:label="my_purchases_fragment"
+        tools:layout="@layout/my_purchases_fragment" >
+        <action
+            android:id="@+id/action_myPurchasesFragment_to_purchasedProductReviewFragment"
+            app:destination="@id/purchasedProductReviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/purchasedProductReviewFragment"
+        android:name="com.example.syriamarket.ui.purchasedProductReview.PurchasedProductReviewFragment"
+        android:label="purchased_product_review_fragment"
+        tools:layout="@layout/purchased_product_review_fragment" />
+    <fragment
+        android:id="@+id/nav_categories"
+        android:name="com.example.syriamarket.ui.categories.CategoriesFragment"
+        android:label="categories_fragment"
+        tools:layout="@layout/categories_fragment" >
+        <action
+            android:id="@+id/action_categoriesFragment_to_allProductsFragment"
+            app:destination="@id/allProductsFragment" />
+    </fragment>
+</navigation>

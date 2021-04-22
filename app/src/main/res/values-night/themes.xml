@@ -16,6 +16,6 @@
 
     <style name="foreground_faded_view" parent="Theme.SyriaMarket">
         <item name="android:background">@drawable/faded_from_bottom</item>
-        <item name="android:backgroundTint">#FF424242</item>
+        <item name="android:backgroundTint">#121212</item>
     </style>
 </resources>

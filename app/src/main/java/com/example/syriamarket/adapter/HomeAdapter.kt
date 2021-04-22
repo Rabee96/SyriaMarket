@@ -1,5 +1,6 @@
 package com.example.syriamarket.adapter
 
+import adapter.ProductsAdapter
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater

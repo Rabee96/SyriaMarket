@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.syriamarket.ui.home.HomeFragment"
+        android:name="ui.home.HomeFragment"
         android:label="home_fragment"
         tools:layout="@layout/home_fragment" >
         <action
@@ -19,21 +19,21 @@
     </fragment>
     <fragment
         android:id="@+id/nav_profile"
-        android:name="com.example.syriamarket.ui.profile.ProfileFragment"
+        android:name="ui.profile.ProfileFragment"
         android:label="profile_fragment"
         tools:layout="@layout/profile_fragment" />
     <fragment
         android:id="@+id/productPageFragment"
-        android:name="com.example.syriamarket.ui.productPage.ProductPageFragment"
+        android:name="ui.productPage.ProductPageFragment"
         android:label="product_page_fragment"
         tools:layout="@layout/product_page_fragment" >
         <action
-            android:id="@+id/action_productPageFragment_to_allProductsFragment"
-            app:destination="@id/allProductsFragment" />
+            android:id="@+id/action_productPageFragment_to_purchasedProductReviewFragment"
+            app:destination="@id/purchasedProductReviewFragment" />
     </fragment>
     <fragment
         android:id="@+id/allProductsFragment"
-        android:name="com.example.syriamarket.ui.allProducts.AllProductsFragment"
+        android:name="ui.allProducts.AllProductsFragment"
         android:label="all_products_fragment"
         tools:layout="@layout/all_products_fragment" >
         <action
@@ -42,7 +42,7 @@
     </fragment>
     <fragment
         android:id="@+id/nav_my_purchases"
-        android:name="com.example.syriamarket.ui.myPurchases.MyPurchasesFragment"
+        android:name="ui.myPurchases.MyPurchasesFragment"
         android:label="my_purchases_fragment"
         tools:layout="@layout/my_purchases_fragment" >
         <action
@@ -51,16 +51,54 @@
     </fragment>
     <fragment
         android:id="@+id/purchasedProductReviewFragment"
-        android:name="com.example.syriamarket.ui.purchasedProductReview.PurchasedProductReviewFragment"
+        android:name="ui.purchasedProductReview.PurchasedProductReviewFragment"
         android:label="purchased_product_review_fragment"
         tools:layout="@layout/purchased_product_review_fragment" />
     <fragment
         android:id="@+id/nav_categories"
-        android:name="com.example.syriamarket.ui.categories.CategoriesFragment"
+        android:name="ui.categories.CategoriesFragment"
         android:label="categories_fragment"
         tools:layout="@layout/categories_fragment" >
         <action
             android:id="@+id/action_categoriesFragment_to_allProductsFragment"
             app:destination="@id/allProductsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_whatsappProductsFragment"
+        android:name="ui.whatsappProducts.WhatsappProductsFragment"
+        android:label="whatsapp_products_fragment"
+        tools:layout="@layout/whatsapp_products_fragment" >
+        <action
+            android:id="@+id/action_nav_whatsappProductsFragment_to_productPageFragment"
+            app:destination="@id/productPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SMSHUBFragment"
+        android:name="ui.smsHUB.SMSHUBFragment"
+        android:label="sms_hub_fragment"
+        tools:layout="@layout/sms_hub_fragment" />
+    <fragment
+        android:id="@+id/whatsAppCatsFragment"
+        android:name="ui.whatsappCats.WhatsAppCatsFragment"
+        android:label="whats_app_cats_fragment"
+        tools:layout="@layout/whats_app_cats_fragment" >
+        <action
+            android:id="@+id/action_whatsAppCatsFragment_to_productPageFragment"
+            app:destination="@id/productPageFragment" />
+        <action
+            android:id="@+id/action_whatsAppCatsFragment_to_phoneCountriesFragment"
+            app:destination="@id/phoneCountriesFragment" />
+        <action
+            android:id="@+id/action_whatsAppCatsFragment_to_nav_whatsappProductsFragment"
+            app:destination="@id/nav_whatsappProductsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneCountriesFragment"
+        android:name="ui.phoneCountries.PhoneCountriesFragment"
+        android:label="phone_countries_fragment"
+        tools:layout="@layout/phone_countries_fragment" >
+        <action
+            android:id="@+id/action_phoneCountriesFragment_to_nav_whatsappProductsFragment"
+            app:destination="@id/nav_whatsappProductsFragment" />
     </fragment>
 </navigation>

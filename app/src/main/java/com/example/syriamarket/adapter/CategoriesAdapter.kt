@@ -1,13 +1,13 @@
 package com.example.syriamarket.adapter
 
 import android.content.Context
-import android.media.Image
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -23,7 +23,7 @@ class CategoriesAdapter(
     class MyViewHolder (itemView: View)  :  RecyclerView.ViewHolder(itemView) {
         val cat : TextView = itemView.tv_category
         val icon : ImageView = itemView.iv_category
-
+        val btnSeeProducts : CardView = itemView.card_btn_cat
     }
 
     override fun onCreateViewHolder(
@@ -37,7 +37,7 @@ class CategoriesAdapter(
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.cat.text = data[position].name
         Glide.with(context).load(data[position].photo).placeholder(R.drawable.logo).into(holder.icon)
-        holder.cat.setOnClickListener {
+        holder.btnSeeProducts.setOnClickListener {
             val bundle = Bundle()
             bundle.putString("catID",data[position]._id)
             it.findNavController().navigate(R.id.action_categoriesFragment_to_allProductsFragment,bundle)

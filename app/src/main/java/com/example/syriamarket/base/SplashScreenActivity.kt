@@ -7,6 +7,7 @@ import android.os.Looper
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import base.MainActivity
 import com.example.syriamarket.R
 import com.example.syriamarket.base.App.Companion.getToken
 import com.example.syriamarket.base.App.Companion.setUserBalance

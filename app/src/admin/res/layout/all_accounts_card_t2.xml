@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="128dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/sharp_border_primary"
+        android:gravity="center"
+        android:padding="4dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/user_name_card" />
+
+    <TextView
+        android:id="@+id/tv_user_role"
+        android:layout_width="72dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/sharp_border_primary"
+        android:gravity="center"
+        android:padding="4dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/user_role" />
+
+    <TextView
+        android:id="@+id/tv_user_type"
+        android:layout_width="72dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/sharp_border_primary"
+        android:gravity="center"
+        android:padding="4dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/user_type" />
+
+    <TextView
+        android:id="@+id/tv_user_balance"
+        android:layout_width="72dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/sharp_border_primary"
+        android:gravity="center"
+        android:padding="4dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/balance_t2" />
+
+    <ImageView
+        android:id="@+id/iv_user_details"
+        android:layout_width="72dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/sharp_border_primary"
+        android:contentDescription="@string/user_details"
+        android:gravity="center"
+        android:padding="4dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:src="@drawable/ic_show_password"
+        app:tint="@color/colorAccent" />
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_user_name_label"
+        android:layout_width="128dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/sharp_border_primary"
+        android:gravity="center"
+        android:padding="4dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/user_name_card" />
+
+    <TextView
+        android:id="@+id/tv_user_role_label"
+        android:layout_width="72dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/sharp_border_primary"
+        android:gravity="center"
+        android:padding="4dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/user_role" />
+
+    <TextView
+        android:id="@+id/tv_user_type_label"
+        android:layout_width="72dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/sharp_border_primary"
+        android:gravity="center"
+        android:padding="4dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/user_type" />
+
+    <TextView
+        android:id="@+id/tv_user_balance_label"
+        android:layout_width="72dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/sharp_border_primary"
+        android:gravity="center"
+        android:padding="4dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/balance_t2" />
+
+    <TextView
+        android:id="@+id/tv_user_details_label"
+        android:layout_width="72dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/sharp_border_primary"
+        android:gravity="center"
+        android:padding="4dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/user_details" />
+</LinearLayout>

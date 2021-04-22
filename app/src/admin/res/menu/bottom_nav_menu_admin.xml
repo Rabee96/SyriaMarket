@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_phonesAndCodesFragment"
+            android:icon="@drawable/whatsapp"
+            android:title="@string/phones_and_codes" />
+        <item
+            android:id="@+id/nav_products_manager"
+            android:icon="@drawable/ic_category"
+            android:title="@string/menu_categories"/>
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_requests"
+            android:icon="@drawable/ic_refund"
+            android:title="@string/nav_requests" />
+        <item
+            android:id="@+id/nav_manage_accounts"
+            android:icon="@drawable/ic_manage_accounts"
+            android:title="@string/accounts" />
+    </group>
+</menu>

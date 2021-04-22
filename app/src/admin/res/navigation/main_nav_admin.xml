@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_admin"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/allAccountsFragment"
+        android:name="ui.accounts.allAccounts.AllAccountsFragment"
+        android:label="all_accounts_fragment"
+        tools:layout="@layout/all_accounts_fragment" />
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="ui.accounts.userProfile.UserProfileFragment"
+        android:label="user_profile_fragment"
+        tools:layout="@layout/user_profile_fragment" >
+        <action
+            android:id="@+id/action_userProfileFragment_to_nav_manage_accounts"
+            app:destination="@id/nav_manage_accounts" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_manage_accounts"
+        android:name="ui.accounts.AccountsFragment"
+        android:label="accounts_fragment"
+        tools:layout="@layout/accounts_fragment" >
+        <action
+            android:id="@+id/action_nav_manage_accounts_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_products_manager"
+        android:name="ui.products.ProductsManagerFragment"
+        android:label="products_manager_fragment"
+        tools:layout="@layout/products_manager_fragment" >
+        <action
+            android:id="@+id/action_nav_products_manager_to_createProductFragment"
+            app:destination="@id/createProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createProductFragment"
+        android:name="ui.products.createProduct.CreateProductFragment"
+        android:label="create_product_fragment"
+        tools:layout="@layout/create_product_fragment" />
+    <fragment
+        android:id="@+id/nav_phonesAndCodesFragment"
+        android:name="ui.phonesAndCodes.PhonesAndCodesFragment"
+        android:label="PhonesAndCodesFragment"
+        tools:layout="@layout/phones_andcodes_fragment">
+        <action
+            android:id="@+id/action_nav_phonesAndCodesFragment_to_createCountryFragment"
+            app:destination="@id/createCountryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="ui.products.productDetails.ProductDetailsFragment"
+        android:label="product_details_fragment"
+        tools:layout="@layout/product_details_fragment" />
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="ui.home.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/home_fragment" />
+    <fragment
+        android:id="@+id/createCountryFragment"
+        android:name="ui.phones.country.CreateCountryFragment"
+        android:label="CreateCountryFragment"
+        tools:layout="@layout/create_country_fragment">
+        <action
+            android:id="@+id/action_createCountryFragment_to_createPhoneFragment"
+            app:destination="@id/createPhoneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createPhoneFragment"
+        android:name="ui.phones.createPhone.CreatePhoneFragment"
+        android:label="create_phone_fragment"
+        tools:layout="@layout/create_phone_fragment" />
+    <fragment
+        android:id="@+id/nav_requests"
+        android:name="ui.requests.RequestsFragment"
+        android:label="requests_fragment"
+        tools:layout="@layout/requests_fragment" >
+        <action
+            android:id="@+id/action_nav_requests_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+        <action
+            android:id="@+id/action_nav_requests_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+</navigation>

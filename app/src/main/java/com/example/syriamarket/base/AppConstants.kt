@@ -11,6 +11,12 @@ class AppConstants {
         const val LIKEE_GAME = "likee"
         const val BIGO_GAME = "bigo"
         const val FREE_FIRE_GAME = "freefire"
+        const val WhatsAppProductPage = 2
+        const val NormalProductPage = 1
+        const val SMS_HUB_BASE_URL = "https://smshub.org/stubs/handler_api.php"
+        const val SMS_HUB_API_KEY = "60178U1b6a0bc0e797f07b5dd3ea4eae51c131"
+        const val ADMIN_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNzg1OTc5NzZkYWU4MjhmYzRhNjcxYyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTYxODc3MTEzMSwiZXhwIjoxNjIxMzYzMTMxfQ.0Mwh6K_sOf6BfTgRTjWZA1mIFcRlxey3wWCAWJF387Y"
+
 
     }
 }

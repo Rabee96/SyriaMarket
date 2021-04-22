@@ -4,6 +4,8 @@ import android.app.Activity
 import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
+import com.example.syriamarket.interfaces.ApiInterface
+import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -50,14 +52,19 @@ class App: Application() {
                     .build()
         }
 
-        var gson = GsonBuilder()
+
+        var gson: Gson = GsonBuilder()
                 .setLenient()
                 .create()
-        var pubgApi = Retrofit.Builder()
+        var pubgApi: Retrofit = Retrofit.Builder()
             .baseUrl(AppConstants.AS7AP_BASE_URL)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
-        var syriaMarketAPI = Retrofit.Builder()
+        /*TODO var smsHUBApi: Retrofit = Retrofit.Builder()
+                .baseUrl(AppConstants.SMS_HUB_BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .build()*/
+        var syriaMarketAPI: Retrofit = Retrofit.Builder()
                 .baseUrl(AppConstants.SYRIA_MARKET_BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build()

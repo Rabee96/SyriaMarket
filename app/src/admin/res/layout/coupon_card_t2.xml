@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="4">
+
+    <TextView
+        android:id="@+id/tv_coupon_number"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/sharp_border_primary"
+        android:gravity="center"
+        android:padding="4dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/coupon_number" />
+
+
+    <TextView
+        android:id="@+id/tv_coupon_balance"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/sharp_border_primary"
+        android:gravity="center"
+        android:padding="4dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/balance_t2" />
+
+    <TextView
+        android:id="@+id/tv_coupon_status"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/sharp_border_primary"
+        android:gravity="center"
+        android:padding="4dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/coupon_status" />
+
+    <ImageView
+        android:id="@+id/iv_btn_coupon_delete"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/sharp_border_primary"
+        android:gravity="center"
+        android:src="@drawable/ic_close"
+        android:padding="4dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/user_details"
+        app:tint="@android:color/holo_red_dark" />
+</LinearLayout>

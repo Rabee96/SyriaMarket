@@ -1,8 +1,9 @@
 package com.example.syriamarket.ui.auth.signIn
 
-import android.content.Context
+import android.content.ComponentName
 import android.content.Intent
 import android.os.Bundle
+import android.telephony.PhoneNumberUtils
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,11 +11,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import base.MainActivity
 import com.example.syriamarket.R
 import com.example.syriamarket.interfaces.ApiInterface
 import com.example.syriamarket.base.App
 import com.example.syriamarket.base.App.Companion.setToken
-import com.example.syriamarket.base.MainActivity
 import com.example.syriamarket.pojo.Credentials
 import com.example.syriamarket.pojo.User
 import kotlinx.android.synthetic.main.fragment_sign_in.view.*
@@ -56,7 +57,7 @@ class SignInFragment : Fragment() {
                                 val user = response.body() as User
                                 val tknSaved = setToken(requireActivity(),user.token)
                                 if (tknSaved){
-                                    val intent = Intent(requireActivity(),MainActivity::class.java)
+                                    val intent = Intent(requireActivity(), MainActivity::class.java)
                                     startActivity(intent)
                                     requireActivity().finish()
                                 }
@@ -76,5 +77,26 @@ class SignInFragment : Fragment() {
 
         }
         return root
+    }
+
+    override fun onResume() {
+        super.onResume()
+        root.ll_contact_us.setOnClickListener {
+            openWhatsApp("+905527557731")
+        }
+    }
+
+
+    private fun openWhatsApp(number: String) {
+        var number = number
+        try {
+            number = number.replace(" ", "").replace("+", "")
+            val sendIntent = Intent("android.intent.action.MAIN")
+            sendIntent.component = ComponentName("com.whatsapp", "com.whatsapp.Conversation")
+            sendIntent.putExtra("jid", PhoneNumberUtils.stripSeparators(number) + "@s.whatsapp.net")
+            startActivity(sendIntent)
+        } catch (e: Exception) {
+            Log.e("Rabee", "ERROR_OPEN_MESSANGER$e")
+        }
     }
 }
